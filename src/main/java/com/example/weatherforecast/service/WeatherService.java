@@ -31,6 +31,7 @@ public class WeatherService {
                     .toUriString();
 
             WeatherApiResponse response = restTemplate.getForObject(url, WeatherApiResponse.class);
+            assert response != null;
             forecasts.addAll(mapToForecast(response, city));
         }
         return forecasts;

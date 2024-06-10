@@ -45,4 +45,48 @@ public class Forecast {
 
     public void setUvIndex(double uv) {
     }
+
+    public String getCity() {
+        return "";
+    }
+
+    public String getDate() {
+        return "";
+    }
+
+    public double getMaxTempC() {
+        return 0;
+    }
+
+    public double getMinTempC() {
+        return 0;
+    }
+
+    public double getAvgTempC() {
+        return 0;
+    }
+
+    public double getMaxWindKph() {
+        return 0;
+    }
+
+    public double getTotalPrecipMm() {
+        return 0;
+    }
+
+    public double getTotalSnowCm() {
+        return 0;
+    }
+
+    public double getAvgHumidity() {
+        return 0;
+    }
+
+    public double getAvgVisibilityKm() {
+        return 0;
+    }
+
+    public double getUvIndex() {
+        return 0;
+    }
 }

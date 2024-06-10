@@ -21,9 +21,9 @@ public class WeatherController {
     private WeatherService weatherService;
 
     @GetMapping("/forecast")
-    @Operation(summary = "Get 3-day weather forecast for top 5 cities in Poland")
+    @Operation(summary = "Get 3-day weather forecast for 5 cities in Poland")
     public List<Forecast> getWeatherForecast() {
-        List<String> cities = Arrays.asList("Warsaw", "Krakow", "Lodz", "Wroclaw", "Poznan");
+        List<String> cities = Arrays.asList("Warsaw", "Lodz", "Krakow", "Wroclaw", "Poznan");
         return weatherService.getWeatherForecastForCities(cities);
     }
 }
