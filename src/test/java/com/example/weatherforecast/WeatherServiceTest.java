@@ -1,6 +1,8 @@
-package com.example.weatherforecast.service;
+package com.example.weatherforecast;
 
 import com.example.weatherforecast.model.Forecast;
+import com.example.weatherforecast.service.WeatherApiResponse;
+import com.example.weatherforecast.service.WeatherService;
 import org.junit.jupiter.api.BeforeEach;
 import org.testng.annotations.Test;
 import org.mockito.InjectMocks;
@@ -11,7 +13,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
-import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -52,7 +53,7 @@ public class WeatherServiceTest {
 
         when(restTemplate.getForObject(url, WeatherApiResponse.class)).thenReturn(mockResponse);
 
-        List<Forecast> forecasts = weatherService.getWeatherForecastForCities(Arrays.asList(city));
+        List<Forecast> forecasts = weatherService.getWeatherForecastForCities(List.of(city));
 
         assertEquals(1, forecasts.size());
         Forecast forecastResult = forecasts.get(0);
@@ -87,7 +88,7 @@ public class WeatherServiceTest {
         forecastday.setDate("2024-06-11");
         forecastday.setDay(day);
 
-        forecast.setForecastday(Arrays.asList(forecastday));
+        forecast.setForecastday(List.of(forecastday));
         return forecast;
     }
 }

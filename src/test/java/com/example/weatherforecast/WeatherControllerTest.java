@@ -1,5 +1,6 @@
-package com.example.weatherforecast.controller;
+package com.example.weatherforecast;
 
+import com.example.weatherforecast.controller.WeatherController;
 import com.example.weatherforecast.model.Forecast;
 import com.example.weatherforecast.service.WeatherService;
 import org.junit.jupiter.api.Test;
