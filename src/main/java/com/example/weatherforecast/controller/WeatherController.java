@@ -27,5 +27,3 @@ public class WeatherController {
         return weatherService.getWeatherForecastForCities(cities);
     }
 }
-
-
